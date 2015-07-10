@@ -1,0 +1,40 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/offOnFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_share_white_24dp"
+        app:rippleColor="#ffffff"
+        android:clickable="true"
+        app:elevation="8dp"
+        app:borderWidth="0dp"
+        />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CurrentLocationMapActivity"
+        tools:layout="@layout/abc_screen_simple" />
+
+    <WebView
+        android:id="@+id/rtc_web_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>
